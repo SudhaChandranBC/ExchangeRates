@@ -16,6 +16,11 @@
 		A61EB6962603014D00BB2F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61EB6942603014D00BB2F25 /* LaunchScreen.storyboard */; };
 		A61EB6A12603014D00BB2F25 /* ExchangeRatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61EB6A02603014D00BB2F25 /* ExchangeRatesTests.swift */; };
 		A61EB6AC2603014E00BB2F25 /* ExchangeRatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61EB6AB2603014E00BB2F25 /* ExchangeRatesUITests.swift */; };
+		A6FF4BBF2603420600362588 /* ExchangeRateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF4BBE2603420500362588 /* ExchangeRateCollectionViewCell.swift */; };
+		A6FF4BC42603425700362588 /* CurrencyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF4BC32603425700362588 /* CurrencyListTableViewController.swift */; };
+		A6FF4BCB260342CA00362588 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF4BC9260342C900362588 /* APIManager.swift */; };
+		A6FF4BCC260342CA00362588 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF4BCA260342CA00362588 /* Networking.swift */; };
+		A6FF4BD2260342DA00362588 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF4BD1260342DA00362588 /* CurrencyModel.swift */; };
 		AD19F2DF43BE3D2EC39DB910 /* Pods_ExchangeRates_ExchangeRatesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D745FBC30253670D0B849B9B /* Pods_ExchangeRates_ExchangeRatesUITests.framework */; };
 		B578EE1110F8338FEBB037AE /* Pods_ExchangeRatesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF8EB07B1466E3787746EC /* Pods_ExchangeRatesTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +63,11 @@
 		A61EB6A72603014E00BB2F25 /* ExchangeRatesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRatesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61EB6AB2603014E00BB2F25 /* ExchangeRatesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesUITests.swift; sourceTree = "<group>"; };
 		A61EB6AD2603014E00BB2F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6FF4BBE2603420500362588 /* ExchangeRateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateCollectionViewCell.swift; sourceTree = "<group>"; };
+		A6FF4BC32603425700362588 /* CurrencyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyListTableViewController.swift; sourceTree = "<group>"; };
+		A6FF4BC9260342C900362588 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		A6FF4BCA260342CA00362588 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		A6FF4BD1260342DA00362588 /* CurrencyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		D745FBC30253670D0B849B9B /* Pods_ExchangeRates_ExchangeRatesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeRates_ExchangeRatesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA997D16E7796FB4E33F48B /* Pods_ExchangeRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A83D505AE1FECAECC03EA1 /* Pods-ExchangeRates-ExchangeRatesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRates-ExchangeRatesUITests.release.xcconfig"; path = "Target Support Files/Pods-ExchangeRates-ExchangeRatesUITests/Pods-ExchangeRates-ExchangeRatesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +168,8 @@
 		A6FF4B9D26032C2400362588 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A6FF4BC8260342A900362588 /* API */,
+				A6FF4BD0260342CF00362588 /* Model */,
 				A6FF4BA726032C3700362588 /* Controllers */,
 				A61EB6892603014A00BB2F25 /* AppDelegate.swift */,
 				A61EB68B2603014A00BB2F25 /* SceneDelegate.swift */,
@@ -168,6 +180,7 @@
 		A6FF4BA726032C3700362588 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A61EB68F2603014A00BB2F25 /* Main.storyboard */,
 				A6FF4BB126032C7800362588 /* ExchangeRate */,
 			);
 			path = Controllers;
@@ -177,9 +190,27 @@
 			isa = PBXGroup;
 			children = (
 				A61EB68D2603014A00BB2F25 /* ExchangeRateViewController.swift */,
-				A61EB68F2603014A00BB2F25 /* Main.storyboard */,
+				A6FF4BBE2603420500362588 /* ExchangeRateCollectionViewCell.swift */,
+				A6FF4BC32603425700362588 /* CurrencyListTableViewController.swift */,
 			);
 			path = ExchangeRate;
+			sourceTree = "<group>";
+		};
+		A6FF4BC8260342A900362588 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A6FF4BC9260342C900362588 /* APIManager.swift */,
+				A6FF4BCA260342CA00362588 /* Networking.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A6FF4BD0260342CF00362588 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6FF4BD1260342DA00362588 /* CurrencyModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B3FD8EC6D8F89E4F4C3EB011 /* Frameworks */ = {
@@ -430,9 +461,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FF4BCB260342CA00362588 /* APIManager.swift in Sources */,
+				A6FF4BC42603425700362588 /* CurrencyListTableViewController.swift in Sources */,
+				A6FF4BD2260342DA00362588 /* CurrencyModel.swift in Sources */,
 				A61EB68E2603014A00BB2F25 /* ExchangeRateViewController.swift in Sources */,
 				A61EB68A2603014A00BB2F25 /* AppDelegate.swift in Sources */,
+				A6FF4BBF2603420600362588 /* ExchangeRateCollectionViewCell.swift in Sources */,
 				A61EB68C2603014A00BB2F25 /* SceneDelegate.swift in Sources */,
+				A6FF4BCC260342CA00362588 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
